@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One');
+@import url('https://fonts.googleapis.com/css?family=Rubik+Mono+One');
+
+$normal-font: 'Oswald', sans-serif;
+$title-font: 'Alfa Slab One', cursive;
+$mono-font: 'Rubik Mono One', sans-serif;
+$largest-font: 27em;
+$xxl-font: 10em;
+$xl-font: 6em;
+$l-font: 4em;
+$m-font: 2em;
+$s-font: 1em;
+$xs-font: 0.75em;
+
+@mixin title-font {
+  font-family: $title-font;
+  font-size: $xxl-font;
+  letter-spacing: 10px;
+  line-height: 120px;
+    
+    @media screen and (max-width: 750px){
+        font-size: $xl-font;
+    }
+    
+    @media screen and (max-width: 450px) {
+        font-size: $l-font; 
+    }
+    
+}
+
+@mixin subtitle-font {
+    font-family: $normal-font;
+    font-size: $xl-font;
+}

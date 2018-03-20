@@ -1,0 +1,27 @@
+canvas {
+  display: block;
+  vertical-align: bottom;
+    
+        &:hover{
+        opacity: 1;
+    }
+}
+
+#particles-js, #particles-js2 {
+  top: 0;
+  right: 0;
+  width: 25%;
+  height: 100%;
+  position: absolute;
+  //z-index: 1;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+    
+}
+
+#particles-js {
+    width: 25%;
+    height: 100vh;
+}

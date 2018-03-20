@@ -1,0 +1,68 @@
+.header {
+    background-color: $darker-grey;
+    height: 100vh;
+    position: relative;
+    &__title {
+        @include title-font;
+        color: white;
+        position: relative;
+        text-shadow: 0px 0px 10px rgba(150, 150, 150, 1);
+        z-index: 2;
+        top: 30vh;
+        left: 15vw;
+        width: 0;
+        margin: 0;
+        @media screen and (max-width: 750px) {
+            left: 5vw;
+            right: 0;
+            text-align: center;
+        }
+        @media screen and (max-width: 450px) {
+            left: 0;
+            right: 0;
+            text-align: center;
+        }
+    }
+    &__title-top,
+    &__title-btm {
+        display: block;
+    }
+    &__arrow-img {
+        width: 100%;
+    }
+    &__arrow {
+        width: 150px;
+        display: block;
+        padding: 25px;
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        bottom: 0;
+        opacity: 0.75;
+        
+        filter: brightness(1) drop-shadow(0px 0px 3px $dark-orchid);
+        transition: filter 0.5s ease-in;
+        
+        &:hover {
+            filter: brightness(3) drop-shadow(0px 0px 20px $light-orchid); 
+            transition: filter 0.5s ease-in;
+        }
+        
+//        &:after {
+//            position: absolute;
+//            bottom: 0;
+//            		filter: drop-shadow(0px 0px 10px rgba(0,0,0,.5));
+//            filter: brightness(100), blur(2px);
+//            filter: blur(2px);
+//            bottom: 25px;
+//            display: block;
+//            content: "";
+//            width: 100px;
+//            height: 100px;
+//            background: transparent url('https://orig00.deviantart.net/965e/f/2018/078/b/6/dot_arrow_by_infamous_raven-dc6dd6l.png') no-repeat;
+//            background-size: contain;
+//        }
+    }
+}

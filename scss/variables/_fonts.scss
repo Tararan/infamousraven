@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Oswald');
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One');
+
+$normal-font: Oswald, sans-serif;
+$title-font-2: Abril Fatface, cursive;
+$title-font: Alfa Slab One, cursive;
+
+$xxl-font: 10em;
+$xl-font: 6em;
+$l-font: 4em;
+$m-font: 2em;
+$s-font: 1em;
+$xs-font: 0.75em;
+
+@mixin title-font {
+  font-family: $title-font;
+  font-size: $xxl-font;
+  letter-spacing: 10px;
+  line-height: 120px;
+}
