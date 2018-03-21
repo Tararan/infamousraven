@@ -5,49 +5,27 @@
     display: block;
     top: 0;
     height: 55px;
+    
     &__hamburger {
         position: fixed;
+        background-color: $dark-orchid;
         z-index: 15;
         color: white;
-        padding: 20px;
+        padding: 10px;
         display: block;
         right: 0;
     }
-    &__hamburger--first-line,
-    &__hamburger--second-line,
-    &__hamburger--third-line {
-        background-color: $dark-orchid;
-        display: block;
-        width: 30px;
-        height: 2px;
-        margin-bottom: 5px;
-        //        box-shadow: 0px 0px 30px #ad38c4;
-        transform: rotate(0deg);
-        -webkit-transform: rotate(0deg);
-        transition: transform .15s ease-in-out, background-color .5s ease-in-out, box-shadow .5s ease-in-out;
-        -webkit-transition: transform .15s ease-in-out, background-color .5s ease-in-out, box-shadow .5s ease-in-out;
+    
+    &__hamburger > span{
+        filter: brightness(1) drop-shadow(0px 0px 2px $dark-orchid);
+        transition: filter 0.75s ease-in;
+        
+        &:hover {
+            filter: brightness(3) drop-shadow(0px 0px 4px $light-orchid); 
+            transition: filter 0.5s ease-in;
+        }
     }
-    &__hamburger:hover>&__hamburger-line {
-        box-shadow: 0px 0px 30px rgba(255, 255, 255, 1);
-        transition: background-color .5s ease-in-out, box-shadow .5s ease-in-out;
-        -webkit-transition: background-color .5s ease-in-out, box-shadow .5s ease-in-out;
-        background-color: lighten($dark-orchid, 50%);
-    }
-    &__hamburger--is-open &__hamburger--first-line {
-        margin-top: 4px;
-        margin-bottom: -1px;
-        transform: rotate(135deg);
-        -webkit-transform: rotate(135deg);
-    }
-    &__hamburger--is-open &__hamburger--second-line {
-        margin-bottom: -2px;
-        transform: rotate(-135deg);
-        -webkit-transform: rotate(-135deg);
-    }
-    &__hamburger--is-open &__hamburger--third-line {
-        transform: rotate(-135deg);
-        -webkit-transform: rotate(-135deg);
-    }
+    
     &__menu {
         position: relative;
         z-index: 10;
@@ -65,17 +43,6 @@
         transition: transform 0.5s;
         -webkit-transition: transform 0.5s;
     }
-    //    &__menu-title {
-    //        text-transform: uppercase;
-    //        font-size: $largest-font;
-    //        font-family: $mono-font;
-    //        color: $darker-grey;
-    //        position: relative;
-    //        left: 0;
-    //        right: 0;
-    //        text-align: center;
-    //        top: -100px;
-    //    }
     &__list {
         margin: 0;
         padding: 0;

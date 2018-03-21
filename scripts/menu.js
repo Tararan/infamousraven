@@ -1,5 +1,6 @@
 $(document).ready(function () {
-    const open = 'nav__hamburger--is-open';
+    const open = 'is-active';
+//    const open = 'nav__hamburger--is-open';
     const hamburger = $('.nav__hamburger');
     const content = $('.content');
     const menu = $('.nav__menu');
